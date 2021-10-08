@@ -52,10 +52,18 @@ nav a {
     padding: 35px;
 }
 
+.nav-activities {
+    padding-top: 38px;
+}
+
 nav .active,
 nav a:hover {
     color: var(--primary);
     border-top: 3px solid var(--primary);
+}
+
+.nav-activities:hover {
+    padding-top: 35px;
 }
 
 /* Search section */
@@ -131,13 +139,14 @@ button:hover{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    column-gap: 30px;
+    padding: 30px 0;
 }
 
 .filter {
     border: 2px solid var(--grey);
     border-radius: 25px;
     position: relative;
-    margin: 30px;
     padding-right: 20px;
     padding-left: 50px;
     display: flex;
@@ -250,10 +259,13 @@ h2 {
 }
 
 .hostings .card h2,
-aside .card h2,
-.card p {
+aside .card h2 {
     margin: 0;
     padding-top: 5px;
+}
+
+.hostings .card p {
+    margin: 4px 0;
 }
 
 .hosting-card,
@@ -263,7 +275,7 @@ aside .card h2,
 }
 
 .hosting-card {
-    height: 200px;
+    height: 210px;
     width: calc(33% - 20px);
 }
 
@@ -280,7 +292,18 @@ aside .card h2,
 }
 
 .hostings .card-img {
-    height: 65%;
+    height: 60%;
+}
+
+.hostings .card-location {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.hostings .notation i {
+    padding-bottom: 5px;
 }
 
 aside .card-img {
@@ -344,7 +367,6 @@ aside .card-location {
 
 .more-info {
     font-weight: bold;
-    margin: 30px;
 } 
 
 /* Activities */
@@ -395,7 +417,7 @@ aside .card-location {
 }
 
 .activity-card {
-    border-radius: 20px 20px 0 0;
+    border-radius: 20px;
     width: 22%;
     margin: 0;
 }
@@ -420,7 +442,9 @@ footer {
     background-color: var(--grey);
     display: flex;
     margin: 60px 0 0 0;
-    justify-content: space-around;
+    padding-left: 50px;
+    padding-right: 50px;
+    gap: 15%;
     width: 100%;
 }
 
@@ -437,12 +461,35 @@ footer a:hover {
     text-decoration: underline;
 }
 
+/* Small Desktop Breakpoint */
+
+@media only screen and (max-width: 1200px) {
+
+    .hosting-card {
+        width: calc(50% - 20px);
+    }
+
+    .popular-card {
+        height: 160px;
+    }
+
+    aside .card-location p {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+}
+
 /* Tab Breakpoint */
 
-@media screen and (max-width: 992px) {
+@media only screen and (max-width: 992px) {
 
     .searchbar button {
         border-radius: 10px;
+    }
+
+    .filters {
+        padding: 20px 0;
     }
 
     .filter {
@@ -451,7 +498,7 @@ footer a:hover {
     }
 
     main {
-        flex-direction: column;
+        flex-direction: column-reverse;
         padding: 0;
     }
 
@@ -461,6 +508,8 @@ footer a:hover {
         width: 100%;
         margin: 0 0 20px 0;
         border-radius: 0;
+        padding-left: 50px;
+        padding-right: 50px;
     }
 
     .hostings {
@@ -471,13 +520,12 @@ footer a:hover {
         transform: scale(1.05);
     }
 
-    .hosting-container,
-    .popular-container {
-        display: block;
+    .hosting-container {
+        justify-content: space-between;
     }
 
     .hosting-card {
-        width: 100%;
+        width: 45%;
         margin-top: 20px;
     }
 
@@ -514,10 +562,12 @@ footer a:hover {
         height: 100%;
         flex-wrap: wrap;
         flex-direction: row;
+        justify-content: space-evenly;
         gap: 10%;
     }
 
     .activity-card {
+        width: 45%;
         height: 200px;
         margin: 20px 0;
     }
@@ -535,7 +585,7 @@ footer a:hover {
     }
 
     .logo img{
-        width: 33%;
+        width: 25%;
         margin: 30px;
     }
 
@@ -619,20 +669,19 @@ footer a:hover {
         margin-top: 20px;
     }
 
-    main {
-        flex-direction: column-reverse;
-    }
-
     .activities {
         padding: 20px;
         margin: 0;
     }
 
+    .hosting-container,
+    .popular-container,
     .activity-container {
         display: block;
         width: 100%;
     }
 
+    .hosting-card,
     .activities .card {
         width: 100%;
     }
