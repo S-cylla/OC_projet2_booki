@@ -612,7 +612,8 @@ footer a:hover {
         text-align: center;
     }
 
-    nav a {
+    nav a,
+    .nav-activities {
         border-radius: 0;
         box-shadow: none;
         margin-left: 0;
@@ -664,6 +665,16 @@ footer a:hover {
 
     .info {
         margin-top: 20px;
+    }
+
+    body main {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hostings,
+    aside {
+        padding: 0;
     }
 
     .activities {
