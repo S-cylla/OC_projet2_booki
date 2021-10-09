@@ -672,13 +672,14 @@ footer a:hover {
     }
 
     body main {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .hostings,
     aside {
-        padding: 0;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .activities {
