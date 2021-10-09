@@ -626,6 +626,10 @@ footer a:hover {
         border: none;
         border-bottom: 3px solid var(--primary);
     }
+
+    .nav-activities:hover {
+        padding-top: 16px;
+    }
     
     section {
         padding: 20px;
