@@ -481,10 +481,6 @@ footer a:hover {
 
 @media only screen and (max-width: 992px) {
 
-    .searchbar button {
-        border-radius: 10px;
-    }
-
     .filters {
         padding: 20px 0;
     }
@@ -703,6 +699,15 @@ footer a:hover {
         display: block;
         padding: 20px;
         margin: 0;
+    }
+
+    footer h2 {
+        margin-top: 25px;
+        margin-bottom: 0;
+    }
+
+    footer ul {
+        margin-top: 0;
     }
 
 }
