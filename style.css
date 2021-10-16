@@ -353,17 +353,15 @@ aside .card-location {
     color: #D9D9D9
 }
 
-.info-container a {
+.info-container {
     transform: scale(1);
     transition: transform 400ms;
-}
-
-.info-container a:hover {
-    transform: scale(1.1);
-}
-
-.info-container {
+    transform-origin: left;
     padding-top: 30px;
+}
+
+.info-container:hover {
+    transform: scale(1.1);
 }
 
 
